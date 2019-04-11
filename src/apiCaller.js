@@ -1,6 +1,6 @@
 
 
-const domain = 'https://www.gita.network/api'
+const domain = process.env.HOST;
 
 
 
@@ -13,6 +13,7 @@ export default (method,headers,endpoint,body)=>{
             headers:
             {
                 ...headers,
+                "Allow":  'application/json',
                 "Content-Type": 'application/json'
             },
             body: JSON.stringify(body),
