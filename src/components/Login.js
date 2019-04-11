@@ -44,7 +44,10 @@ class Login extends Component{
         this.setState({validated:true});
       }
       else{
-        apiCaller("POST",3838,{},'login',`username=${this.state.username}&p256=${sha256(this.state.password)}`).then(response=>{
+        apiCaller("POST",{},"login",{
+          "username":this.state.username,
+          "p256":sha256(this.state.password)})
+          .then(response=>{
           return response.json()
         }).then(data=>{
           

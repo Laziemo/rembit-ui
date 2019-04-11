@@ -4,14 +4,13 @@
   "description": "rembit frontend",
   "main": "index.js",
   "scripts": {
-    "dev": "parcel src/public/index.html",
+    "dev": "PORT=1234 parcel src/public/index.html",
     "build": "parcel build src/public/index.html",
     "start": "npm run build && live-server dist"
   },
-  "author": "Sandeep A Nair",
+  "author": "Gita",
   "license": "ISC",
   "dependencies": {
-    "@babel/plugin-proposal-class-properties": "^7.4.0",
     "@material-ui/core": "^3.9.3",
     "history": "^4.9.0",
     "prop-types": "^15.7.2",
@@ -28,6 +27,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.4.3",
+    "@babel/plugin-proposal-class-properties": "^7.4.0",
     "babel": "^6.23.0",
     "live-server": "^1.2.1",
     "parcel": "^1.12.3"

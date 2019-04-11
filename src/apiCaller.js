@@ -5,7 +5,7 @@ const domain = 'https://www.gita.network/api'
 
 
 
-export default (method,port,headers,endpoint,body)=>{
+export default (method,headers,endpoint,body)=>{
     let url=`${domain}/${endpoint}`;    
     if(method==="POST"){
         const options = {
@@ -13,9 +13,10 @@ export default (method,port,headers,endpoint,body)=>{
             headers:
             {
                 ...headers,
-                "Content-Type": 'application/x-www-form-urlencoded'
+                "Content-Type": 'application/json'
             },
-            body: body,
+            body: JSON.stringify(body),
+            json: true
 
         };
         console.log(options)
